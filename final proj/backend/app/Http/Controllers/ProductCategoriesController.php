@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ProductCategoriesController extends Controller
+{
+    public function index() {
+        $productCategories = \App\Models\ProductCategory::all();
+
+        return response()->json($productCategories, 200);
+    }
+}
